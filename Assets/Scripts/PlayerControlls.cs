@@ -13,7 +13,7 @@ public class PlayerControlls : MonoBehaviour
     [SerializeField] private LayerMask jumpmingGround;
     [SerializeField] private float moveSpeed = 7f;
     [SerializeField] private float jumpForce = 14f;
-    private enum MovementState{idle, Running, jumping, falling}
+    private enum MovementState{idle, running, jumping, falling}
     private float dirX = 0f;
     
 
@@ -45,12 +45,12 @@ public class PlayerControlls : MonoBehaviour
         MovementState state;
         if(dirX > 0f)
         {
-            state = MovementState.Running;
+            state = MovementState.running;
             spriteRenderer.flipX = false;
         }
         else if(dirX < 0f)
         {
-            state = MovementState.Running;
+            state = MovementState.running;
             spriteRenderer.flipX = true;
         }
         else
